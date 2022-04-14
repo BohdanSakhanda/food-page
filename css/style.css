@@ -569,7 +569,6 @@ body {
   font-weight: 700;
   font-size: 100px;
   line-height: 1.5;
-  text-align: center;
   letter-spacing: 0.2em;
   color: #303030;
 }
@@ -582,7 +581,10 @@ body {
 
 .title-block__sub-title {
   position: absolute;
-  top: 20%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   left: 0;
   width: 100%;
   overflow-wrap: break-word;
@@ -596,7 +598,13 @@ body {
 
 @media (max-width: 767.98px) {
   .title-block__sub-title {
-    font-size: calc(28px + (36 - 28) * ((100vw - 320px) / (767 - 320)));
+    font-size: calc(20px + (36 - 20) * ((100vw - 320px) / (767 - 320)));
+  }
+}
+
+@media (max-width: 367.98px) {
+  .title-block__sub-title {
+    line-height: 1.5;
   }
 }
 
@@ -967,6 +975,12 @@ body {
   }
 }
 
+@media (max-width: 412px) {
+  .recipes__main {
+    min-width: 310px;
+  }
+}
+
 .recipes__main-point {
   position: absolute;
   top: 40px;
@@ -1130,6 +1144,7 @@ body {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 6px;
   width: 100%;
   height: 100%;
   -webkit-transition: all 0.3s ease-in-out;
